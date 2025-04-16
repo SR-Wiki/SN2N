@@ -142,14 +142,14 @@ class net2D():
         batch_num = int(np.floor(len(path) / self.bs))
         imsize = (self.bs, 1, self.img_patch[0], self.img_patch[1])
         for i in range(batch_num):
+            imgs_As = []
+            imgs_Bs = []
             location = np.array(np.random.randint(low = 0, high=len(path), size=(self.bs, 1), dtype = 'int'))
             for batchsize in range(self.bs):
             # location = location.tolist()
                 batch = []
                 batch_tem = path[int(location[batchsize, :])]
-                batch.append(batch_tem)
-                imgs_As = []
-                imgs_Bs = []
+                batch.append(batch_tem)                
                 for img in batch:
                     img = imread(img)
                     h, w = img.shape
