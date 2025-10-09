@@ -1,8 +1,8 @@
-[![Github commit](https://img.shields.io/github/last-commit/WeisongZhao/SN2N)](https://github.com/SR-Wiki/SN2N/)
+[![Github commit](https://img.shields.io/github/last-commit/SR-Wiki/SN2N)](https://github.com/SR-Wiki/SN2N/)
 [![Github All Releases](https://img.shields.io/github/downloads/WeisongZhao/SN2N/total.svg)](https://github.com/SR-Wiki/SN2N/releases/tag/v0.3.2/)
 [![License](https://img.shields.io/github/license/WeisongZhao/SN2N)](https://github.com/SR-Wiki/SN2N/blob/master/LICENSE/)
 [![paper](https://img.shields.io/badge/paper-nat.%20methods-black.svg)](https://www.nature.com/articles/s41592-024-02400-9/)
-[![releases](https://img.shields.io/badge/release-v0.3.5-FF6600.svg)](https://github.com/SR-Wiki/SN2N/releases/tag/v0.3.5/)
+[![releases](https://img.shields.io/badge/release-v0.4.9-FF6600.svg)](https://github.com/SR-Wiki/SN2N/releases/tag/v0.4.9/)
 <br>
 
 [![Twitter](https://img.shields.io/twitter/follow/QuLiying?label=liying)](https://twitter.com/QuLiying)
@@ -14,8 +14,9 @@
 <p>
 <h1 align="center">SN<font color="#FF6600">2</font>N</h1>
 <h5 align="center">Self-inspired learning to denoise for live-cell super-resolution microscopy.</h5>
-<h6 align="right">v0.3.5</h6>
+<h6 align="right">v0.4.9</h6>
 </p>
+
 <br>
 
 
