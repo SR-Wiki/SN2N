@@ -34,11 +34,11 @@ if __name__ == '__main__':
     ======Other parameters do not require modification; for details, refer to SN2N.get_options.========
     """
     
-    img_path = 'C:/Users/qqq/Desktop/SN2N-V0.3.0/examples/denoising2D/data/raw_data'
+    img_path = "D:/SN2N-main/examples/denoising2D/data/raw_data"
     P2Pmode = '1'
     P2Pup = '1'
-    BAmode = '1'
-    SWsize = '64' 
+    BAmode = '2'
+    SWsize = '64'
     
     datagen2D_args = [
         '--img_path', img_path,

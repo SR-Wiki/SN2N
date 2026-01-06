@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
-from SN2N.inference import Predictor3D
+from SN2N.inference_32bit import Predictor3D
 from SN2N.get_options import Predict3D
     
 
@@ -24,8 +24,11 @@ if __name__ == '__main__':
         {default: '2, 256, 256'}
     """
     
-    img_path = 'C:/Users/qqq/Desktop/SN2N-V0.3.0/examples/denoising3D/data/raw_data'
-    model_path = 'C:/Users/qqq/Desktop/SN2N-V0.3.0/examples/denoising3D/data/models'
+    img_path ='M:/HGS/3d_MT_simulate/SN2N-3D/cjj/Dataset'
+    #img_path ='C:\HGS/3D-image\he\inference_data'
+    #img_path ='C:\HGS/3D-image/405/t-inferencedata'
+    model_path = 'M:/HGS/3d_MT_simulate/SN2N-3D/cjj\models'
+    #model_path = 'C:\HGS/3D-image\he/achieved_models\sn2n/0.1-2e-4-non-normalize'
     infer_mode = '1'
     overlap_shape = '2,256,256'
     

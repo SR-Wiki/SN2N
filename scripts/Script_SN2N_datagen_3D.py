@@ -35,11 +35,11 @@ if __name__ == '__main__':
     ======Other parameters do not require modification; for details, refer to SN2N.get_options.========
     """
     
-    img_path = 'C:/Users/qqq/Desktop/SN2N-V0.3.0/examples/denoising3D/data/raw_data'
+    img_path = 'M:\HGS\simulate\DATA\SN2N_3D/raw/data/'
     P2Pmode = '1'
     P2Pup = '1'
     BAmode = '1'
-    SWsize = '64' 
+    SWsize = '128'
     SWfilter = '8'
     
     

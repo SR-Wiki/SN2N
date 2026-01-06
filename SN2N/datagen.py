@@ -208,8 +208,7 @@ class generator2D():
         SWmode = self.SWmode
         SWfilter = self.SWfilter
         img_patch = self.img_patch
-        # make sure the image is in range of 0~255
-        # image_data = 255*normalize(image_data)
+        #image_data = 255*normalize(image_data)
         if SWmode == 0:
             threshold_real = SWfilter
         if SWmode == 1:
@@ -296,9 +295,11 @@ class generator2D():
         imgpart_list = []
         for tt in range(t):
             temp_l = left[tt, :, :]
-            # temp_l = normalize(temp_l)
+            temp_l = temp_l/255
+            #temp_l = normalize(temp_l)
             temp_r = right[tt, :, :]
-            # temp_r = normalize(temp_r)
+            temp_r = temp_r/255
+            #temp_r = normalize(temp_r)
             imgpart[0 : imsize[0], 0 : imsize[1]] = temp_l        
             imgpart[0 : imsize[0], imsize[1] : 2 * imsize[1]] = temp_r
             imgpart_copy = imgpart.copy()
@@ -725,8 +726,7 @@ class generator3D():
         SWmode = self.SWmode
         SWfilter = self.SWfilter
         (t, h, w) = image_data_stack.shape
-        # make sure the image is in range of 0~255
-        # image_data_stack = 255*normalize(image_data_stack)
+        #image_data_stack = 255*normalize(image_data_stack)
         if SWmode == 0:
             threshold_real = SWfilter
         if SWmode == 1:
@@ -844,9 +844,11 @@ class generator3D():
         imgpart_list = []
         for f in range(frame):
             temp_l = left_stack[f, :, :, :]
-            # temp_l = normalize(temp_l)
+            temp_l = temp_l / 255
+            #temp_l = normalize(temp_l)
             temp_r = right_stack[f, :, :, :]
-            # temp_r = normalize(temp_r)
+            temp_r = temp_r / 255
+            #temp_r = normalize(temp_r)
             imgpart[:, 0 : imsize[0], 0 : imsize[1]] = temp_l        
             imgpart[:, 0 : imsize[0], imsize[1] : 2 * imsize[1]] = temp_r
             imgpart_copy = imgpart.copy()

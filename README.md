@@ -1,21 +1,25 @@
-[![Github commit](https://img.shields.io/github/last-commit/SR-Wiki/SN2N)](https://github.com/SR-Wiki/SN2N/)
-[![Github All Releases](https://img.shields.io/github/downloads/WeisongZhao/SN2N/total.svg)](https://github.com/SR-Wiki/SN2N/releases/tag/v0.3.2/)
-[![License](https://img.shields.io/github/license/WeisongZhao/SN2N)](https://github.com/SR-Wiki/SN2N/blob/master/LICENSE/)
+[![Github commit](https://img.shields.io/github/last-commit/WeisongZhao/SN2N)](https://github.com/WeisongZhao/SN2N/)
+[![Github All Releases](https://img.shields.io/github/downloads/WeisongZhao/SN2N/total.svg)](https://github.com/WeisongZhao/SN2N/releases/tag/v0.3.2/)
+[![License](https://img.shields.io/github/license/WeisongZhao/SN2N)](https://github.com/WeisongZhao/SN2N/blob/master/LICENSE/)
 [![paper](https://img.shields.io/badge/paper-nat.%20methods-black.svg)](https://www.nature.com/articles/s41592-024-02400-9/)
-[![releases](https://img.shields.io/badge/release-v0.4.9-FF6600.svg)](https://github.com/SR-Wiki/SN2N/releases/tag/v0.4.9/)
+[![releases](https://img.shields.io/badge/release-v0.3.5-FF6600.svg)](https://github.com/WeisongZhao/SN2N/releases/tag/v0.3.5/)
 <br>
 
 [![Twitter](https://img.shields.io/twitter/follow/QuLiying?label=liying)](https://twitter.com/QuLiying)
 [![Twitter](https://img.shields.io/twitter/follow/weisong_zhao?label=weisong)](https://twitter.com/weisong_zhao)
-[![GitHub stars](https://img.shields.io/github/stars/SR-Wiki/SN2N?style=social)](https://github.com/WeisongZhao/SN2N/) 
+[![GitHub stars](https://img.shields.io/github/stars/WeisongZhao/SN2N?style=social)](https://github.com/WeisongZhao/SN2N/) 
 
 
 
 <p>
 <h1 align="center">SN<font color="#FF6600">2</font>N</h1>
 <h5 align="center">Self-inspired learning to denoise for live-cell super-resolution microscopy.</h5>
-<h6 align="right">v0.4.9</h6>
+<h6 align="right">v0.3.5</h6>
 </p>
+
+
+
+
 
 <br>
 
@@ -61,7 +65,7 @@ Our SN2N is fully competitive with the supervised learning methods and overcomes
 1. Clone the repository.
 
     ```bash
-    git clone https://github.com/SR-Wiki/SN2N.git
+    git clone https://github.com/WeisongZhao/SN2N.git
     cd SN2N    
     ```
 
@@ -87,7 +91,7 @@ We have provided **two examples** of denoising in 2D and 3D, along with the data
 
 For the ultralow SNR data with ultrahigh baseline signal and a number of hot pixels, we adapted the routinely used percentile normalization before the data generation step to remove the smooth background or hot pixels. 
 
-There are **two ways to execute percentile normalization**.  One option is to utilize the **percentile normalization Fiji plugin, available for easy access:** https://github.com/SR-Wiki/percentile_normalization.imagej. Users can directly remove the ultra-strong baseline signal before training using this ready-to-use plugin. Alternatively, users can employ the following **Python scripts** for percentile normalization.
+There are **two ways to execute percentile normalization**.  One option is to utilize the **percentile normalization Fiji plugin, available for easy access:** https://github.com/WeisongZhao/percentile_normalization.imagej. Users can directly remove the ultra-strong baseline signal before training using this ready-to-use plugin. Alternatively, users can employ the following **Python scripts** for percentile normalization.
 
 ```
 ---------import package--------
@@ -135,12 +139,12 @@ Users can run the script after customizing parameters in Script_SN2N_datagen_2D.
 
 #### 2D data generation
 ```
-python Script_SN2N_datagen_2D.py --img_path "Users own path/data/raw_data" --P2Pmode "1" --P2Pup "1" --BAmode "1" --SWsize "64"        
+python -m Script_SN2N_datagen_2D.py --img_path "Users own path/data/raw_data" --P2Pmode "1" --P2Pup "1" --BAmode "1" --SWsize "64"        
 ```
 
 #### 3D data generation
 ```
-python Script_SN2N_datagen_3D.py --img_path "Users own path/data/raw_data" --P2Pmode "1" --P2Pup "1" --BAmode "1" --SWsize "64"    
+python -m Script_SN2N_datagen_3D.py --img_path "Users own path/data/raw_data" --P2Pmode "1" --P2Pup "1" --BAmode "1" --SWsize "64"    
 ```
 
 #### Parameters instructions
@@ -190,13 +194,13 @@ Users can run the script after customizing parameters in Script_SN2N_trainer_2D.
 #### 2D data training
 
 ```
-python Script_SN2N_trainer_2D.py --img_path "Users own path/data/raw_data" --sn2n_loss "1" --bs "32" --lr "2e-4" --epochs "100"
+python -m Script_SN2N_trainer_2D.py --img_path "Users own path/data/raw_data" --sn2n_loss "1" --bs "32" --lr "2e-4" --epochs "100"
 ```
 
 #### 3D data training
 
 ```
-python Script_SN2N_trainer_3D.py --img_path "Users own path/data/raw_data" --sn2n_loss "1" --bs "4" --lr "2e-4" --epochs "100" 
+python -m Script_SN2N_trainer_3D.py --img_path "Users own path/data/raw_data" --sn2n_loss "1" --bs "4" --lr "2e-4" --epochs "100" 
 ```
 
 #### Parameters instructions
@@ -238,14 +242,14 @@ Users can run the script after customizing parameters in Script_SN2N_inference_2
 #### 2D inference
 
   ```
-python Script_SN2N_inference_2D.py --img_path "Users own path/data/raw_data" --model_path "Users own path/data/model" --infer_mode "0"
+python -m Script_SN2N_inference_2D.py --img_path "Users own path/data/raw_data" --model_path "Users own path/data/model" --infer_mode "0"
   ```
 
 #### 3D inference
 In 3D prediction tasks, we use the method of stitching predictions to avoid issues of memory overflow
 
   ```
-  python Script_SN2N_inference_3D.py --img_path "Users own path/data/raw_data" --model_path "Users own path/data/model" --infer_mode "0" --overlap_shape "2,256,256"
+  python -m Script_SN2N_inference_3D.py --img_path "Users own path/data/raw_data" --model_path "Users own path/data/model" --infer_mode "0" --overlap_shape "2,256,256"
   ```
 
 #### Parameters instructions
@@ -279,12 +283,12 @@ Our SN2N denoiser has been integrated into the SN2Nexecute.py function, allowing
 Users can run the script after **customizing parameters** in Script_SN2Nexecute_2D.py (Script_SN2Nexecute_3D.py).
 #### 2D execution
 ```
-python Script_SN2Nexecute_2D.py --img_path "Users own path/data/raw_data" --P2Pmode "1" --P2Pup "1" --BAmode "1" --SWsize "64" --sn2n_loss "1" --bs "32" --lr "2e-4" --epochs "100" --model_path "Users own path/data/model" --infer_mode "0"
+python -m Script_SN2Nexecute_2D.py --img_path "Users own path/data/raw_data" --P2Pmode "1" --P2Pup "1" --BAmode "1" --SWsize "64" --sn2n_loss "1" --bs "32" --lr "2e-4" --epochs "100" --model_path "Users own path/data/model" --infer_mode "0"
 ```
 
 #### 3D execution
 ```
-python Script_SN2Nexecute_3D.py --img_path "Users own path/data/raw_data" --P2Pmode "1" --P2Pup "1" --BAmode "1" --SWsize "64" --sn2n_loss "1" --bs "32" --lr "2e-4" --epochs "100" --model_path "Users own path/data/model" --infer_mode "0" --overlap_shape "2,256,256"
+python -m Script_SN2Nexecute_3D.py --img_path "Users own path/data/raw_data" --P2Pmode "1" --P2Pup "1" --BAmode "1" --SWsize "64" --sn2n_loss "1" --bs "32" --lr "2e-4" --epochs "100" --model_path "Users own path/data/model" --infer_mode "0" --overlap_shape "2,256,256"
 ```
 #### Parameters instructions
 
@@ -371,8 +375,8 @@ We  have provided 12 generalized pre-trained models for specfic tasks and hope t
 
 - **Some fancy results and comparisons:** [Lab's website](https://weisongzhao.github.io/home/portfolio-4-col.html#SN2N)
 - **Preprint:** [Liying Qu et al. Self-inspired learning to denoise for live-cell super-resolution microscopy, bioRxiv (2024).](https://doi.org/10.1101/2024.01.23.576521)
-- **Percentile normalization plugin:** https://github.com/SR-Wiki/SN2N
+- **Percentile normalization plugin:** https://github.com/WeisongZhao/SN2N
 - **Publication:** [Liying Qu et al. Self-inspired learning for denoising live-cell super-resolution microscopy, 21, 1895–1908, Nature Methods (2024)](https://www.nature.com/articles/s41592-024-02400-9).
 
-## Open source [SN2N](https://github.com/SR-Wiki/SN2N)
+## Open source [SN2N](https://github.com/WeisongZhao/SN2N)
 This software and corresponding methods can only be used for **non-commercial** use, and they are under Open Data Commons Open Database License v1.0.

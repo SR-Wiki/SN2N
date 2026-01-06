@@ -28,11 +28,11 @@ if __name__ == '__main__':
     ======Other parameters do not require modification; for details, refer to SN2N.get_options.========
     """
         
-    img_path = 'C:/Users/qqq/Desktop/SN2N-V0.3.0/examples/denoising3D/data/raw_data'
-    sn2n_loss = '1'
+    img_path = 'D:/data/examples/denoising3D/rawdata'
+    sn2n_loss = '0.05'
     bs = '4'
     lr = '2e-4'
-    epochs = '100'
+    epochs = '20'
     
     trainer3D_args = [
         '--img_path', img_path,

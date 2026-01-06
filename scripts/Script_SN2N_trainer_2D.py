@@ -28,7 +28,7 @@ if __name__ == '__main__':
     ======Other parameters do not require modification; for details, refer to SN2N.get_options.========
     """
         
-    img_path = 'C:/Users/qqq/Desktop/SN2N-V0.3.0/examples/denoising2D/data/raw_data'
+    img_path = 'D:/SN2N-main/examples/denoising2D/data/raw_data'
     sn2n_loss = '1'
     bs = '32'
     lr = '2e-4'

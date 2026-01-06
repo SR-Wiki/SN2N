@@ -21,8 +21,8 @@ if __name__ == '__main__':
         the given model_path on the Img_path provided by the user.
     """
     
-    img_path = 'C:/Users/qqq/Desktop/SN2N-V0.3.0/examples/denoising2D/data/raw_data'
-    model_path = 'C:/Users/qqq/Desktop/SN2N-V0.3.0/examples/denoising2D/data/models'
+    img_path = 'M:\HGS\simulate\DATA\SN2N/raw2/data'
+    model_path = 'M:\HGS\simulate\DATA\SN2N/raw2\models'
     infer_mode = '1'
     
     Predict2D_args = [
